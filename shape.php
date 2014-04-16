@@ -37,10 +37,10 @@ class THTMLElement {
   private $atype = "Element";
   private $description = "Base HTML Element Class";
   private $acceptelements = array ("all");
-  private $baseelements = array("tshape", "th1tag", "th2tag", "th3tag", "th4tag", "th5tag", "th6tag", "th7tag", "ttitle", "tptag", "tdivtag", "tformtag", "tbodytag", "thtmltag", 
-                                              "theadtag", "ttextinput", "tpasswordinput", "tbutton", "tsubmit", "tline", "tarticle", "tfieldset", "ttable", "ttr", "tth", "ttd", "tcheckbox", "tdd", "tdt", "tdl", "ttime", 
-											  "tinput", "tscripttag", "ttextarea", "tselect", "toption", "ta", "tstyle", "tbr", "tspan", "tlabel", "tb", "ti", "tu", "tlegend", "tul", "tol", "tli", "tcite", "tvar", "twbr", "tstrike","tdel", "tcolgroup", 
-											  "tpre", "tthead", "ttbody", "ttfoot", "tsass", "tcoffeescript", "tiframe", "tnav", "timg", "tfooter", "tsection", "talink", "thr", "tsub", "tsup", "taside", "tbase", "tbdo", "tdatalist", "tcode");
+  private $baseelements = array("tshape", "th1tag", "th2tag", "th3tag", "th4tag", "th5tag", "th6tag", "th7tag", "ttitle", "tptag", "tdivtag", "tformtag", "tbodytag", "thtmltag", "tprogress", "tq", "ts", "tstrong", "ttrack", "tem", "tcomment", "tabbr", "tdfn",
+                                              "theadtag", "ttextinput", "tpasswordinput", "tbutton", "tsubmit", "tline", "tarticle", "tfieldset", "ttable", "ttr", "tth", "ttd", "tcheckbox", "tdd", "tdt", "tdl", "ttime", "tmark", "tmeta", "tmeter", "tobject", "toptgroup", "toutput",
+											  "tinput", "tscripttag", "ttextarea", "tselect", "toption", "ta", "tstyle", "tbr", "tspan", "tlabel", "tb", "ti", "tu", "tlegend", "tul", "tol", "tli", "tcite", "tvar", "twbr", "tstrike","tdel", "tcolgroup", "tblockquote", "tbig", "tsmall", "tfigcaption", "tmap",
+											  "tpre", "tthead", "ttbody", "ttfoot", "tsass", "tcoffeescript", "tiframe", "tnav", "timg", "tfooter", "tsection", "talink", "thr", "tsub", "tsup", "taside", "tbase", "tbdo", "tdatalist", "tcode", "tarea", "taudio", "tsource", "ttcanvas", "tcaption", "tcenter", "tfigure");
   
   function set_openingtag ($tag) {
     $this->openingtag = $tag;
@@ -976,7 +976,7 @@ class ttime extends THTMLElement {
   //this function is what makes everything happen as far as attributes etc go
   function initialize() {
     $this->set_openingtag("<TIME[attributes]>");
-    $this->set_closingtag("</TIME");
+    $this->set_closingtag("</TIME>");
   }
 }
 
@@ -987,6 +987,466 @@ function atime ( $arguments = "" ) {
   return $rc->newInstanceArgs ( $arguments );
 }
 /*END TIME TAG ========================================*/
+
+/*AREA TAG =======================================*/
+class tarea extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<AREA[attributes]>");
+    $this->set_closingtag("");
+  }
+}
+
+//function that outputs things
+function area ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tarea');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END AREA TAG ========================================*/
+
+/*AUDIO TAG =======================================*/
+class taudio extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<AUDIO[attributes]>");
+    $this->set_closingtag("</AUDIO>");
+  }
+}
+
+//function that outputs things
+function audio ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('taudio');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END AUDIO TAG ========================================*/
+
+/*SOURCE TAG =======================================*/
+class tsource extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<SOURCE[attributes]>");
+    $this->set_closingtag("");
+  }
+}
+
+//function that outputs things
+function source ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tsource');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END SOURCE TAG ========================================*/
+
+/*BLOCKQUOTE TAG =======================================*/
+class tblockquote extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<BLOCKQUOTE[attributes]>");
+    $this->set_closingtag("</BLOCKQUOTE");
+  }
+}
+
+//function that outputs things
+function blockquote ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tblockquote');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END BLOCKQUOTE TAG ========================================*/
+
+/*BIG TAG =======================================*/
+class tbig extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<BIG[attributes]>");
+    $this->set_closingtag("</BIG>");
+  }
+}
+
+//function that outputs things
+function big ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tbig');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END BIG TAG ========================================*/
+
+/*SMALL TAG =======================================*/
+class tsmall extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<SMALL[attributes]>");
+    $this->set_closingtag("</SMALL>");
+  }
+}
+
+//function that outputs things
+function small ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tsmall');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END SMALL TAG ========================================*/
+
+/*CANVAS TAG =======================================*/
+class ttcanvas extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<CANVAS[attributes]>");
+    $this->set_closingtag("</CANVAS>");
+  }
+}
+
+//function that outputs things
+function canvas ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('ttcanvas');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END CANVAS TAG ========================================*/
+
+/*CAPTION TAG =======================================*/
+class tcaption extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<CAPTION[attributes]>");
+    $this->set_closingtag("</CAPTION>");
+  }
+}
+
+//function that outputs things
+function caption ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tcaption');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END CAPTION TAG ========================================*/
+
+/*CENTER TAG =======================================*/
+class tcenter extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<CENTER[attributes]>");
+    $this->set_closingtag("</CENTER>");
+  }
+}
+
+//function that outputs things
+function center ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tcenter');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END CENTER TAG ========================================*/
+
+/*FIGURE TAG =======================================*/
+class tfigure extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<FIGURE[attributes]>");
+    $this->set_closingtag("</FIGURE>");
+  }
+}
+
+//function that outputs things
+function figure ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tfigure');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END FIGURE TAG ========================================*/
+
+/*FIGCAPTION TAG =======================================*/
+class tfigcaption extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<FIGCAPTION[attributes]>");
+    $this->set_closingtag("</FIGCAPTION>");
+  }
+}
+
+//function that outputs things
+function figcaption ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tfigcaption');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END FIGCAPTION TAG ========================================*/
+
+/*MAP TAG =======================================*/
+class tmap extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<MAP[attributes]>");
+    $this->set_closingtag("</MAP>");
+  }
+}
+
+//function that outputs things
+function map ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tmap');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END MAP TAG ========================================*/
+
+
+/*MARK TAG =======================================*/
+class tmark extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<MARK[attributes]>");
+    $this->set_closingtag("</MARK>");
+  }
+}
+
+//function that outputs things
+function mark ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tmark');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END MARK TAG ========================================*/
+
+/*META TAG =======================================*/
+class tmeta extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<META[attributes]>");
+    $this->set_closingtag("</META>");
+  }
+}
+
+//function that outputs things
+function meta ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tmeta');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END META TAG ========================================*/
+
+/*METER TAG =======================================*/
+class tmeter extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<METER[attributes]>");
+    $this->set_closingtag("</METER>");
+  }
+}
+
+//function that outputs things
+function meter ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tmeter');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END METER TAG ========================================*/
+
+/*OBJECT TAG =======================================*/
+class tobject extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<OBJECT[attributes]>");
+    $this->set_closingtag("</OBJECT>");
+  }
+}
+
+//function that outputs things
+function object ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tobject');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END OBJECT TAG ========================================*/
+
+/*OPTGROUP TAG =======================================*/
+class toptgroup extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<OPTGROUP[attributes]>");
+    $this->set_closingtag("</OPTGROUP>");
+  }
+}
+
+//function that outputs things
+function optgroup ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('toptgroup');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END OPTGROUP TAG ========================================*/
+
+/*OUTPUT TAG =======================================*/
+class toutput extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<OUTPUT[attributes]>");
+    $this->set_closingtag("</OUTPUT>");
+  }
+}
+
+//function that outputs things
+function output ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('toutput');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END OUTPUT TAG ========================================*/
+
+/*PROGRESS TAG =======================================*/
+class tprogress extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<PROGRESS[attributes]>");
+    $this->set_closingtag("</PROGRESS>");
+  }
+}
+
+//function that outputs things
+function progress ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tprogress');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END PROGRESS TAG ========================================*/
+
+/*Q TAG =======================================*/
+class tq extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<Q[attributes]>");
+    $this->set_closingtag("</Q>");
+  }
+}
+
+//function that outputs things
+function q ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tq');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END Q TAG ========================================*/
+
+/*S TAG =======================================*/
+class ts extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<S[attributes]>");
+    $this->set_closingtag("</S>");
+  }
+}
+
+//function that outputs things
+function s ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('ts');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END S TAG ========================================*/
+
+/*STRONG TAG =======================================*/
+class tstrong extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<STRONG[attributes]>");
+    $this->set_closingtag("</STRONG>");
+  }
+}
+
+//function that outputs things
+function strong ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass( 'tstrong' );
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END STRONG TAG ========================================*/
+
+/*TRACK TAG =======================================*/
+class ttrack extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<TRACK[attributes]>");
+    $this->set_closingtag("</TRACK>");
+  }
+}
+
+//function that outputs things
+function track ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass( 'ttrack' );
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END TRACK TAG ========================================*/
+
+/*EM TAG =======================================*/
+class tem extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<EM[attributes]>");
+    $this->set_closingtag("</EM>");
+  }
+}
+
+//function that outputs things
+function em ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass( 'tem' );
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END EM TAG ========================================*/
+
+/*!-- TAG =======================================*/
+class tcomment extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<!--");
+    $this->set_closingtag("-->");
+  }
+}
+
+//function that outputs things
+function comment ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tcomment');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END !-- TAG ========================================*/
+
+/*ABBR TAG =======================================*/
+class tabbr extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<ABBR[attributes]>");
+    $this->set_closingtag("</ABBR>");
+  }
+}
+
+//function that outputs things
+function abbr ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass('tabbr');
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END ABBR TAG ========================================*/
+
+/*DFN TAG =======================================*/
+class tdfn extends THTMLElement {
+  //this function is what makes everything happen as far as attributes etc go
+  function initialize() {
+    $this->set_openingtag("<DFN[attributes]>");
+    $this->set_closingtag("</DFN>");
+  }
+}
+
+//function that outputs things
+function dfn ( $arguments = "" ) {
+  $arguments = func_get_args ();
+  $rc = new ReflectionClass( 'tdfn' );
+  return $rc->newInstanceArgs ( $arguments );
+}
+/*END DFN TAG ========================================*/
 
 /*SCRIPT TAG =======================================*/
 class tscripttag extends THTMLElement {
@@ -1000,7 +1460,7 @@ class tscripttag extends THTMLElement {
 //function that outputs things
 function scripttag ( $arguments = "" ) {
   $arguments = func_get_args();
-  $rc = new ReflectionClass('tscripttag');
+  $rc = new ReflectionClass( 'tscripttag' );
   return $rc->newInstanceArgs( $arguments ); 
 }
 
@@ -1019,7 +1479,7 @@ class tspan extends THTMLElement {
 //function that outputs things
 function span ( $arguments = "" ) {
   $arguments = func_get_args();
-  $rc = new ReflectionClass('tspan');
+  $rc = new ReflectionClass( 'tspan' );
   return $rc->newInstanceArgs( $arguments ); 
 }
 /*END SPAN TAG ===================================*/
@@ -1042,9 +1502,6 @@ function alink ( $arguments = "" ) {
 
 /*END LINK TAG ===================================*/
 
-
-
-
 /*LABEL TAG =======================================*/
 class tlabel extends THTMLElement {
    //this function is what makes everything happen as far as attributes etc go
@@ -1060,7 +1517,6 @@ function label ( $arguments = "" ) {
   $rc = new ReflectionClass('tlabel');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END LABEL TAG ===================================*/
 
 /*UL TAG =======================================*/
@@ -1078,7 +1534,6 @@ function ul ( $arguments = "" ) {
   $rc = new ReflectionClass('tul');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END UL TAG ===================================*/
 
 /*OL TAG =======================================*/
@@ -1096,7 +1551,6 @@ function ol ( $arguments = "" ) {
   $rc = new ReflectionClass('tol');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END OL TAG ===================================*/
 
 
@@ -1115,7 +1569,6 @@ function li ( $arguments = "" ) {
   $rc = new ReflectionClass('tli');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END LI TAG ===================================*/
 
 
@@ -1134,7 +1587,6 @@ function b ( $arguments = "" ) {
   $rc = new ReflectionClass('tb');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END B TAG ===================================*/
 
 /*START I TAG =======================================*/
@@ -1152,7 +1604,6 @@ function i ( $arguments = "" ) {
   $rc = new ReflectionClass('ti');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END I TAG ===================================*/
 
 /*START U TAG =======================================*/
@@ -1170,7 +1621,6 @@ function u ( $arguments = "" ) {
   $rc = new ReflectionClass('tu');
   return $rc->newInstanceArgs( $arguments ); 
 }
-
 /*END U TAG ===================================*/
 
 /*P TAG =======================================*/
@@ -1333,11 +1783,6 @@ function legend ( $arguments = "" ) {
   return $rc->newInstanceArgs( $arguments ); 
 }
 /*END LEGEND TAG ===================================*/
-
-
-
-
-
 
 /*FIELDSET TAG =======================================*/
 class tfieldset extends THTMLElement {
@@ -1690,6 +2135,7 @@ function textarea ($arguments = "") {
   $rc = new ReflectionClass('ttextarea');
   return $rc->newInstanceArgs( $arguments ); 
 }
+
 /*END TEXTAREA TAG ====================================*/
 
 
@@ -1728,8 +2174,6 @@ function passwordinput ($arguments = "") {
   return $rc->newInstanceArgs( $arguments ); 
 }
 /*END TEXTINPUT TAG ====================================*/
-
-
 
 /*BUTTON TAG =======================================*/
 class tbutton extends THTMLElement {
@@ -1857,25 +2301,71 @@ function slib_compress_script( $buffer ) {
 if (!function_exists("array_flatten")) {
   function array_flatten ($array)
   {
-      
-      foreach ($array as $i => $arrvalue)
-      //while ($i < count ($array))
-      {                     
-            while (is_array ($array[$i])) {
-                if (!$array[$i])
-                {
-                    array_splice ($array, $i, 1);
-                    --$i; //may be a problem here - we need to check this out
-                    break;
-                }
-                else
-                {
-                    array_splice ($array, $i, 1, $array[$i]);
-                }
-            }
+      $i = 0;
+      while ($i < count ($array))
+      {
+          while (is_array ($array[$i]))
+          {
+              if (!$array[$i])
+              {
+                  array_splice ($array, $i, 1);
+                  --$i;
+                  break;
+              }
+              else
+              {
+                  array_splice ($array, $i, 1, $array[$i]);
+              }
+          }
+          ++$i;
       }
       return $array;
   }
 }
+
+/*Function for getting information about class objects*/
+if ( !function_exists( "get_function_arguments" ) ){
+	function get_function_arguments ($functionname) {
+        $f = new ReflectionFunction($functionname);
+        $args = array();
+        foreach ($f->getParameters() as $param) {
+                $tmparg = '';
+                if ($param->isPassedByReference()) $tmparg = '&';
+                if ($param->isOptional()) {
+                        $tmparg = '[' . $tmparg . '$' . $param->getName() . ' = ' . $param->getDefaultValue() . ']';
+                } else {
+                        $tmparg.= '$' . $param->getName();
+                }
+                $args[] = $tmparg;
+                unset ($tmparg);
+        }
+		
+		return $args;
+    }
+
+}
+
+if ( !function_exists( "get_classfunction_arguments" ) ){
+	function get_classfunction_arguments ($classname, $functionname) {
+        $f = new ReflectionMethod($classname, $functionname);
+        $args = array();
+        foreach ($f->getParameters() as $param) {
+                $tmparg = '';
+                if ($param->isPassedByReference()) $tmparg = '&';
+				
+			
+                if ($param->isOptional()) {
+                        $tmparg = '[' . $tmparg . '$' . $param->getName() . ' = ' . $param->getDefaultValue() . ']';
+                } else {
+                        $tmparg.= '$' . $param->getName();
+                }
+                $args[] = $tmparg;
+                unset ($tmparg);
+        }
+		
+		return $args;
+	}
+}
+
 
 ?>
