@@ -348,6 +348,7 @@
           $content .= "*/\n";
           $content .= "require_once ('".$root."/cdesimple.php');\n";
           $content .= "require_once ('".$root."/connection.php');\n";
+          $content .= "require_once ('".$root."/shape.php');\n";
           $content .= "if (file_exists('".$root."/".$outputpath."/".$release."/functions.php')) {\n  require_once ('".$root."/".$outputpath."/".$release."/functions.php'); \n}\n";
           $content .= "if (file_exists('".$root."/".$outputpath."/".$release."/{$interface->NAME}api.php')) { require_once ('".$root."/".$outputpath."/".$release."/{$interface->NAME}api.php'); }\n\n";
           $content .= 'session_name($_CDEDEV_SESSION_NAME);'."\n";
