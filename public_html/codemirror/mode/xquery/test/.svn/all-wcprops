@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test
+END
+._testMultiAttr.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testMultiAttr.js
+END
+testMultiAttr.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testMultiAttr.js
+END
+._testBase.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testBase.js
+END
+._testEmptySequenceKeyword.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testEmptySequenceKeyword.js
+END
+testBase.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testBase.js
+END
+._index.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._index.html
+END
+._testNamespaces.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testNamespaces.js
+END
+testEmptySequenceKeyword.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testEmptySequenceKeyword.js
+END
+._testQuotes.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testQuotes.js
+END
+._testProcessingInstructions.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/._testProcessingInstructions.js
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/index.html
+END
+testNamespaces.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testNamespaces.js
+END
+testQuotes.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testQuotes.js
+END
+testProcessingInstructions.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tina4/!svn/ver/1/codemirror/mode/xquery/test/testProcessingInstructions.js
+END

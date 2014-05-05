@@ -8,11 +8,21 @@
  *        Created:  05/17/2012 09:20:25 PM
  *       Revision:  none
  *
- *         Author:  Stas Kobzar (stas@modulis.ca), 
+ *         Author:  Stas Kobzar (stas@modulis.ca),
  *        Company:  Modulis.ca Inc.
  *
  * =====================================================================================
  */
+
+(function(mod) {
+  if (typeof exports == "object" && typeof module == "object") // CommonJS
+    mod(require("../../lib/codemirror"));
+  else if (typeof define == "function" && define.amd) // AMD
+    define(["../../lib/codemirror"], mod);
+  else // Plain browser env
+    mod(CodeMirror);
+})(function(CodeMirror) {
+"use strict";
 
 CodeMirror.defineMode("asterisk", function() {
   var atoms    = ["exten", "same", "include","ignorepat","switch"],
@@ -99,9 +109,9 @@ CodeMirror.defineMode("asterisk", function() {
       state.extenStart = true;
       switch(cur) {
         case 'same': state.extenSame = true; break;
-        case 'include': 
-        case 'switch': 
-        case 'ignorepat': 
+        case 'include':
+        case 'switch':
+        case 'ignorepat':
           state.extenInclude = true;break;
         default:break;
       }
@@ -121,7 +131,7 @@ CodeMirror.defineMode("asterisk", function() {
       };
     },
     token: function(stream, state) {
-      
+
       var cur = '';
       var ch  = '';
       if(stream.eatSpace()) return null;
@@ -174,10 +184,12 @@ CodeMirror.defineMode("asterisk", function() {
       } else{
         return basicToken(stream,state);
       }
-      
+
       return null;
     }
   };
 });
 
 CodeMirror.defineMIME("text/x-asterisk", "asterisk");
+
+});

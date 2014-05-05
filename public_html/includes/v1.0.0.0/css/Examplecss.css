@@ -1,0 +1,33 @@
+body {font-family: Arial, Sans-Serif; }
+table.tina4grid {font-family: Arial, Sans-Serif;padding: 0px;margin : 0px;background-color: #ebebeb;width: 100%; }
+table.tina4grid thead {background-color: lightblue; }
+table.tina4grid td.search, table.tina4grid td.buttons {background-color: #ebebeb; }
+table.tina4grid th.gridtitle {font-size: 1.2em; }
+table.tina4grid th {border-top: 1px solid #3d3d3d;border-bottom: 1px solid #3d3d3d;padding: 2px; }
+table.tina4grid tbody tr:nth-child(2n) {background-color: #e0e0e0; }
+table.tina4grid tbody td {padding: 0.2em; }
+table.tina4grid tbody tr.rowhover {background-color: lightblue;cursor: pointer; }
+table.tina4grid tbody tr.rowselected {background-color: #6969ff;color: white;box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.5); }
+.gridform label.labelinput {display: block;font-size: 0.9em;margin-top: 0.2em;padding: 0.2em; }
+.gridform label.labelinput span {min-width: 150px;display: inline-block;text-align: right;margin-right: 0.5em; }
+.gridform label.labelinput span:after {content: " :"; }
+.gridform label.labelinput input {display: inline-block;font-size: 1em; }
+.gridform h4 {background-color: #6969ff;color: white;padding: 0.3em;margin-bottom: 0.2em; }
+.gridform label:nth-child(2n) {background-color: #e0e0e0; }
+@media only screen
+and (min-device-width : 320px)and (max-device-width : 480px) {}
+@media only screen
+and (min-width : 321px) {}
+@media only screen
+and (max-width : 320px) {}
+@media only screen
+and (min-device-width : 768px)and (max-device-width : 1024px) {}
+@media only screen
+and (min-device-width : 768px)and (max-device-width : 1024px)and (orientation : landscape) {}
+@media only screen
+and (min-device-width : 768px)and (max-device-width : 1024px)and (orientation : portrait) {}
+@media only screen
+and (min-width : 1224px) {}
+@media only screen
+and (min-width : 1824px) {}
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {}
